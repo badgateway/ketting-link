@@ -1,0 +1,67 @@
+{
+  "name": "ketting-link",
+  "version": "0.1.0",
+  "description": "A small library that makes working with (lists of-) hyperlinks easier. ",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "make test",
+    "prepublishOnly": "make build",
+    "build": "make build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badgateway/ketting-link.git"
+  },
+  "keywords": [
+    "link",
+    "hyperlink",
+    "hateoas",
+    "hypermedia",
+    "ketting",
+    "hal"
+  ],
+  "author": "Evert Pot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badgateway/ketting-link/issues"
+  },
+  "homepage": "https://github.com/badgateway/ketting-link#readme",
+  "files": [
+    "src/",
+    "dist/",
+    "LICENSE"
+  ],
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^12.20.11",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "chai": "^4.3.3",
+    "eslint": "^7.21.0",
+    "mocha": "^9.0.3",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.2.3"
+  },
+  "nyc": {
+    "extension": [
+      ".ts"
+    ]
+  },
+  "mocha": {
+    "require": [
+      "ts-node/register",
+      "test/testserver.ts"
+    ],
+    "ignore": "test/test-entrypoint.ts",
+    "recursive": true,
+    "extension": [
+      "ts",
+      "js",
+      "tsx"
+    ],
+    "exit": true
+  }
+}
